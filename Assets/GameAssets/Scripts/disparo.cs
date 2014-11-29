@@ -18,7 +18,7 @@ public class disparo : MonoBehaviour {
 			Transform nuevoProyectil;
 			nuevoProyectil = (Transform) Instantiate(proyectilPrefab);
 			nuevoProyectil.transform.position = this.posicionDisparo.transform.position;
-			nuevoProyectil.rigidbody.AddForce(Camera.main.transform.forward*fuerzaDisparo, ForceMode.Impulse);
+			nuevoProyectil.rigidbody.AddForce(this.posicionDisparo.transform.forward*fuerzaDisparo, ForceMode.Impulse);
 		}
 	}
 }
